@@ -91,14 +91,14 @@ with st.sidebar:
         submitted = st.form_submit_button("Añadir o actualizar")
         if submitted and symbol:
             add_asset(symbol, qty, price)
-            st.experimental_rerun()
+            st.rerun()  # ✅ CORREGIDO
 
     st.header("🗑️ Eliminar activo")
     if not st.session_state.portfolio.empty:
         to_remove = st.selectbox("Selecciona activo", st.session_state.portfolio["symbol"].tolist())
         if st.button("Eliminar"):
             remove_asset(to_remove)
-            st.experimental_rerun()
+            st.rerun()  # ✅ CORREGIDO
 
 # Mostrar datos de cartera
 portfolio_df = compute_metrics(st.session_state.portfolio)
