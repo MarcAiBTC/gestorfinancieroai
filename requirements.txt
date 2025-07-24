@@ -1,5 +1,8 @@
-streamlit
-pandas
-yfinance
-numpy
-plotly
+streamlit>=1.28.0
+pandas>=2.0.0
+plotly>=5.15.0
+yfinance>=0.2.18
+numpy>=1.24.0
+datetime
+json5>=0.9.0
+typing-extensions>=4.5.0
